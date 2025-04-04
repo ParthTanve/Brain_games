@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Multiple"
+    android:background="@drawable/space">
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="301dp"-->
+<!--        android:layout_height="167dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:layout_marginBottom="524dp"-->
+<!--        app:srcCompat="@drawable/ship" />-->
+
+
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="214dp"
+        android:onClick="Start"
+        android:padding="40dp"
+        android:text="Go!"
+        android:background="@null"
+        android:textColor="#FDFD62"
+        android:textStyle="bold"
+        android:textSize="80sp"
+        android:visibility="visible"
+        />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/images"
+        android:layout_width="323dp"
+        android:layout_height="223dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="4dp"
+        android:background="@null"
+        android:src="@drawable/pokemon"
+        android:visibility="visible"
+        />
+
+
+
+    <RelativeLayout
+        android:id="@+id/gameRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="invisible">
+
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="30s"
+            android:textAlignment="center"
+            android:textColor="#F2FD00 "
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:text="0/0"
+            android:textAlignment="center"
+            android:textColor="#F2FD00 "
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:text="30*20"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/wmute"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="74dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="291dp"
+            android:layout_marginBottom="539dp"
+            android:background="#FFF"
+            android:onClick="mute"
+            tools:ignore="OnClick" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSum"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="120dp"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:background="#F8164B"
+                android:onClick="btnChooseAnswer"
+                android:padding="40dp"
+                android:tag="0"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8164B"
+                android:onClick="btnChooseAnswer"
+                android:padding="40dp"
+                android:tag="1"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="#F8164B"
+                android:onClick="btnChooseAnswer"
+                android:tag="2"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#F8164B"
+                android:onClick="btnChooseAnswer"
+                android:padding="40dp"
+                android:tag="3"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="40sp" />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tvCorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="81dp"
+            android:background="#FDFD62"
+            android:text=""
+            android:textColor="#F8164B"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_width="351dp"
+            android:layout_height="146dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="451dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="134dp"
+            android:background="#1FAF1D"
+            android:onClick="btnPlayAgain"
+            android:text="Play Again!"
+            android:textColor="#ffffff"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="93dp"
+            android:layout_marginBottom="27dp"
+            android:background="#F8164B"
+            android:text="EXIT"
+
+            android:visibility="invisible" />
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imagew"
+            android:layout_width="306dp"
+            android:layout_height="279dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="166dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="287dp"
+            android:src="@drawable/kiter"
+            android:background="@null"
+            android:visibility="invisible" />
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
